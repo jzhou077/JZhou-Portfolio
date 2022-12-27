@@ -162,4 +162,13 @@ body {
         height: 30vh;
         width: 25vw;
     }
+    .mainSec {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .mainText {
+        text-align: center;
+    }
 }
