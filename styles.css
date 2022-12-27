@@ -41,6 +41,7 @@ body {
 }
 
 .mainText p {
+    width: 40rem;
     max-width: 600px;
     margin-top: 15px;
     margin-bottom: 20px;
@@ -60,7 +61,6 @@ body {
 
 .contactBtn:hover {
     background-color: #dbdbdb;
-    height: 3.5rem;
     width: 9.5rem;
     letter-spacing: 3px;
     cursor: pointer;
@@ -81,7 +81,7 @@ body {
     padding: 2.5%;
     visibility: hidden;
     opacity: 0;
-    transition-delay: 0.1s;
+    transition-delay: 0.05s;
     transition-duration: 0.5s;
 }
 
@@ -98,16 +98,20 @@ body {
 
 .modalCloseBar1 {
     background-color:black;
-    width: 20px;
+    width: 1.25rem;
     height: 1px;
     transform: rotate(45deg);
 }
 
 .modalCloseBar2 {
     background-color:black;
-    width: 20px;
+    width: 1.25rem;
     height: 1px;
     transform: rotate(-45deg);
+}
+
+.modalContent {
+    height: 100%;
 }
 
 .modalContent h1 {
@@ -121,8 +125,10 @@ body {
 
 .contactInfo {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 1.5rem;
+    align-content: center;
+    height: 80%;
 }
 
 /* at phone dimensions, change the formatting of the modal */
@@ -143,4 +149,17 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+@media screen and (max-width: 768px) {
+    .contactInfo {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: space-evenly;
+    }
+    .modal {
+        height: 30vh;
+        width: 25vw;
+    }
 }
