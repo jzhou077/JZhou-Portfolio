@@ -1,0 +1,24 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.mainSec {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    padding: 100px;
+    
+    /*basically makes it so that the padding and border are included in the elements total height and width */
+    /*so the padding goes inside rather than outside, which is very helpful*/
+    box-sizing:border-box;
+}
+
+.mainText {
+    font-family: 'Oxygen', sans-serif;
+}
+
+.mainText h1 {
+    font-weight: 200px;
+}
