@@ -88,8 +88,8 @@ body {
 .modalCloseBtn {
     /* relative to parent element */
     position: fixed;
-    top: 25px;
-    right: 20px;
+    top: 10%;
+    right: 4%;
 }
 
 .modalCloseBtn:hover {
@@ -157,6 +157,7 @@ body {
         flex-direction: column;
         flex-wrap: wrap;
         align-content: space-evenly;
+        margin-top: 10%;
     }
     .modal {
         height: 30vh;
@@ -170,5 +171,8 @@ body {
     }
     .mainText {
         text-align: center;
+    }
+    html {
+        font-size: 2vh;
     }
 }
