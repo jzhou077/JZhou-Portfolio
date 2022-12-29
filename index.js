@@ -3,7 +3,7 @@ $(document).ready(function() {
         $(".modal").css("visibility", "visible");
         $(".modal").css("opacity", "1");
         $(".overlay").css("display", "block");
-        $(".overlay").css("opacity", "0.25");
+        $(".overlay").css("opacity", "0.2");
     });
     $(".modalCloseBtn").click(function(){
         $(".modal").css("opacity", "0");

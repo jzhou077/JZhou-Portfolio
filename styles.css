@@ -13,7 +13,7 @@ body {
 .mainSec {
     min-height: 100vh;
     width: 100%;
-    padding: 5vw;
+    padding: 0 5vw;
     /*basically makes it so that the padding and border are included in the elements total height and width */
     /*so the padding goes inside rather than outside, which is very helpful*/
     box-sizing:border-box;
@@ -174,6 +174,35 @@ body {
     transition-delay: 0.1s;
 }
 
+footer {
+    position: absolute;
+    top: 90%;
+    background-color: #D9CB9F;
+    height: 10vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5vh 1.25vw;
+}
+
+footer h4 {
+    margin: 0;
+}
+
+.footerContacts {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 0.75vh 0;
+}
+
+footer p {
+    font-size: 0.75rem;
+    font-weight: normal;
+    margin: 0;
+    margin-left: 0.5rem;
+    color: #262321;
+}
+
 
 @media screen and (max-width: 768px) {
     html {
@@ -183,6 +212,7 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        width: 90%;
     }
     .mainText p {
         width: 100%;
