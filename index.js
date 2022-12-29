@@ -1,4 +1,33 @@
 $(document).ready(function() {
+    // slide up text effect
+
+    var slideAnimation1 = anime({
+        targets: ".slide1",
+        translateY: -40,
+        opacity: 1,
+        duration: 500,
+        easing: "linear",
+    });
+
+    var slideAnimation2 = anime({
+        targets: ".slide2",
+        translateY: -40,
+        opacity: 1,
+        duration: 500,
+        easing: "linear",
+        delay: 250
+    });
+
+    var slideAnimation3 = anime({
+        targets: ".slide3",
+        translateY: -40,
+        opacity: 1,
+        duration: 500,
+        easing: "linear",
+        delay: 500
+    });
+
+    // buttons
     $(".contactBtn").click(function () {
         $(".modal").css("visibility", "visible");
         $(".modal").css("opacity", "1");
