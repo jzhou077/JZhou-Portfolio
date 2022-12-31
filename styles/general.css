@@ -1,0 +1,153 @@
+.menuBtn {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.menuBtn > * {
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.menuBar1 {
+    background-color: black;
+    width: 22px;
+    height: 2px;
+    margin-bottom: 5px;
+}
+
+.menuBar2 {
+    background-color: black;
+    width: 22px;
+    height: 2px;
+    margin-bottom: 5px;
+}
+
+.menuBar3 {
+    background-color: black;
+    width: 22px;
+    height: 2px;
+}
+
+.menuBtnChanged > .menuBar1 {
+    background-color: white;
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menuBtnChanged > .menuBar2 {
+    background-color: white;
+    opacity: 0;
+}
+
+.menuBtnChanged > .menuBar3 {
+    background-color: white;
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+    transition-duration: 1s;
+}
+
+.menu-background {
+    width: inherit;
+    height: inherit;
+    background-image: url("C:/Users/Jack Zhou/Desktop/JZhou-Portfolio/images/menu-background.jpg");
+    background-size: cover;
+    opacity: 0.3;
+}
+
+.menuShown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mainContentHidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.navigation {
+    /* absolute is relative to parent; fixed is relative to */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 5vw;
+    opacity: 1;
+    z-index: 99;
+}
+
+.navigation-items {
+    font-size: 4rem;
+    list-style: none;
+}
+
+/* hover effect */
+.navigation-item, .navigation-item a {
+    position: relative;
+    transition-duration: 0.5s;
+}
+
+/* underline rgb effect animation */
+@keyframes underline-pan {
+    from { background-position: 0% center; }
+    to { background-position: -200% center; }
+}
+
+.navigation-item a::before {
+    content: "";
+    /* IN ORDER FOR ABSOLUTE POSITIONING TO WORK, THE PARENT DIV (THAT IT IS POSITIONING RELATIVE TO) HAS TO BE POSITIONED. MOST EASILY DONE WITH POSITION: RELATIVE */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5%;
+    border-radius: 4px;
+    /* this makes the underline animation end on the right (once you stop hovering) and scales the width down to 0 */
+    transform-origin: right;
+    transform: scaleX(0);
+    /* ----------------------------------------------------------------------------------------------------------- */
+    transition: transform 0.3s ease-in-out;
+    /* underline rgb effect animation */
+    background: linear-gradient(to right, royalblue, purple, royalblue);
+    background-size: 200%;
+    animation: underline-pan 1s linear infinite;
+}
+
+.navigation-item:hover a:before {
+    /* this makes the underline start (when you hover) from the left and grow to the full width */
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation-items:hover .navigation-item {
+    opacity: 0.3;
+}
+
+.navigation-items:hover .navigation-item:hover {
+    opacity: 1;
+}
+
+.navigation-item a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-background {
+        background-position-x: center;
+    }
+    .navigation-items {
+        text-align: center;
+    }
+}

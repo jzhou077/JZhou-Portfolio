@@ -1,5 +1,5 @@
 :root {
-    font-size: 16px;
+    /* font-size: 16px; */
     font-family: 'Poppins', sans-serif;
 }
 
@@ -7,24 +7,28 @@ body {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background-color: #F5E3B1;
 }
 
-.mainSec {
+.mainContent {
     height: 90vh;
     width: 100%;
-    padding: 0 5vw;
-    /*basically makes it so that the padding and border are included in the elements total height and width */
-    /*so the padding goes inside rather than outside, which is very helpful*/
-    box-sizing: border-box;
+    background-color: #F5E3B1;
+    transition-duration: 1s;
 }
 
 .mainText {
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translateY(-50%);
     margin: 0px;
+    /*basically makes it so that the padding and border are included in the elements total height and width */
+    /*so the padding goes inside rather than outside, which is very helpful*/
+    box-sizing: border-box;
+    padding: 0 5vw;
+    /* ---------------------------------------------------------------------------------------------------- */
     color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 .slideAnimation {
@@ -48,29 +52,28 @@ body {
 }
 
 .mainText p {
-    width: 40rem;
-    max-width: 600px;
+    max-width: 60ch;
     margin-top: 15px;
     margin-bottom: 20px;
 }
 
 .contactBtn {
     background-color: white;
-    height: 3rem;
-    width: 9rem;
+    height: 3em;
+    width: 9em;
     font-family: 'Poppins', sans-serif;
-    font-weight: 100px;
+    font-weight: 100;
     font-size: 1rem;
     border-radius: 10px;
     letter-spacing: 2px;
+    transition-duration: 0.5s;
 }
 
 .contactBtn:hover {
     background-color: #dbdbdb;
-    width: 9.5rem;
+    width: 9.5em;
     letter-spacing: 3px;
     cursor: pointer;
-    transition-duration: 0.5s;
 }
 
 .modal {
@@ -182,7 +185,7 @@ body {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     top: 90%;
     background-color: #D9CB9F;
     height: 10vh;
@@ -206,19 +209,20 @@ footer p {
     font-size: 0.75rem;
     font-weight: normal;
     margin: 0;
-    margin-left: 0.5rem;
+    margin-left: 0.5em;
     color: #262321;
 }
 
 
 @media screen and (max-width: 768px) {
-    html {
+    :root {
         font-size: 10px;
     }
     .mainText {
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        align-items: center;
         width: 90%;
     }
     .mainText p {

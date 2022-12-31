@@ -1,29 +1,29 @@
 $(document).ready(function() {
     // slide up text effect
-
-    var slideAnimation1 = anime({
+    //h1 text (Hello, I'm Jack Zhou)
+    anime({
         targets: ".slide1",
         translateY: -40,
         opacity: 1,
-        duration: 500,
-        easing: "linear",
+        duration: 750,
+        easing: "easeInQuad",
     });
-
-    var slideAnimation2 = anime({
+    //desc text (School, little about me)
+    anime({
         targets: ".slide2",
         translateY: -40,
         opacity: 1,
-        duration: 500,
-        easing: "linear",
+        duration: 750,
+        easing: "easeInQuad",
         delay: 250
     });
-
-    var slideAnimation3 = anime({
+    //contact me button
+    anime({
         targets: ".slide3",
         translateY: -40,
         opacity: 1,
-        duration: 500,
-        easing: "linear",
+        duration: 750,
+        easing: "easeInQuad",
         delay: 500
     });
 

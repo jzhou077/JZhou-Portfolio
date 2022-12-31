@@ -4,14 +4,39 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="styles.css" rel="stylesheet">
+        <link href="styles/index.css" rel="stylesheet">
+        <link href="styles/general.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <section class="mainSec">
+        <div class="menuBtn">
+            <div class="menuBar1"></div>
+            <div class="menuBar2"></div>
+            <div class="menuBar3"></div>
+        </div>
+        <div class="menu">
+            <div class="menu-background"></div>
+            <div class="navigation">
+                <ul class="navigation-items">
+                    <li class="navigation-item">
+                        <a href="#">Projects</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="#">About Me</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="#">Contact Me</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="#">More</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mainContent">
             <div class="mainText">
                 <h1 class="slideAnimation slide1">Hello, I'm</h1>
                 <h1 class="slideAnimation slide1" style="color: #4169E1">Jack Zhou</h1>
@@ -19,7 +44,16 @@
                 <p class="slideAnimation slide2">I'm interested in the tech industry and software development. Always looking for opportunities to expand my knowledge and skills! Please feel free to contact me through any of the platforms I've listed below.</p>
                 <button class="contactBtn slideAnimation slide3">Contact Me</button>
             </div>
-        </section>
+            <footer>
+                <h4>Get In Touch</h4>
+                <span class="footerContacts">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                      <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                    </svg>
+                    <p>jackzhoupersonal@gmail.com</p>
+                </span>
+            </footer>
+        </div>
         <div class="modal">
             <div class="modalContent">
                 <div class="modalCloseBtn">
@@ -51,20 +85,11 @@
                 </div>
             </div>
         </div>
-        <div class="overlay"></div>
-        <footer>
-            <h4>Get In Touch</h4>
-            <span class="footerContacts">
-               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
-                </svg>
-                <p>jackzhoupersonal@gmail.com</p>
-            </span>
-
-        </footer>
+        <aside class="overlay"></aside>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-        <script src="index.js"></script>
+        <script src="scripts/index.js"></script>
+        <script src="scripts/general.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js" integrity="sha512-E378bwaeZf1nwXeJGIwTB58A5gPt5jFU3u6aTGja4ZdRFJeo/N/REKnBgNZOZlH6JdnOPO98vg2AnSGaNfCMFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </body>
 </html>
