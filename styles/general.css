@@ -81,7 +81,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding: 0 5vw;
+    padding: 0 10vw;
     opacity: 1;
     z-index: 99;
 }
@@ -89,12 +89,19 @@
 .navigation-items {
     font-size: 4rem;
     list-style: none;
+    padding: 0;
 }
 
-/* hover effect */
-.navigation-item, .navigation-item a {
+.navigation-item {
+    overflow: hidden;
+}
+
+.navigation-item a {
+    /* inline-block, for some reason, makes it so that the width of the <a> tag is proportinate to the text inside it */
+    display: inline-block;
+    /* relative for the hover underline effect */
     position: relative;
-    transition-duration: 0.5s;
+    transition: opacity 0.5s linear;
 }
 
 /* underline rgb effect animation */
@@ -129,11 +136,11 @@
     transform: scaleX(1);
 }
 
-.navigation-items:hover .navigation-item {
+.navigation-items:hover .navigation-item a {
     opacity: 0.3;
 }
 
-.navigation-items:hover .navigation-item:hover {
+.navigation-items:hover .navigation-item:hover a {
     opacity: 1;
 }
 
@@ -143,6 +150,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .menu {
+        display: flex;
+        justify-content: center;
+    }
     .menu-background {
         background-position-x: center;
     }

@@ -1,31 +1,10 @@
 $(document).ready(function() {
-    // slide up text effect
-    //h1 text (Hello, I'm Jack Zhou)
-    anime({
-        targets: ".slide1",
-        translateY: -40,
-        opacity: 1,
-        duration: 750,
-        easing: "easeInQuad",
-    });
-    //desc text (School, little about me)
-    anime({
-        targets: ".slide2",
-        translateY: -40,
-        opacity: 1,
-        duration: 750,
-        easing: "easeInQuad",
-        delay: 250
-    });
-    //contact me button
-    anime({
-        targets: ".slide3",
-        translateY: -40,
-        opacity: 1,
-        duration: 750,
-        easing: "easeInQuad",
-        delay: 500
-    });
+
+    //slide up text effect
+    var t1 = gsap.timeline({defaults: { ease: "power1.in"}});
+    t1.from(".slide1", {yPercent: 100, duration: 0.75});
+    t1.from(".slide2", {yPercent: 100, duration: 0.75});
+    t1.to(".slide3", {opacity: 1, duration: 0.5});
 
     // buttons
     $(".contactBtn").click(function () {
